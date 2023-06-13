@@ -1,0 +1,14 @@
+
+<div class="grid-images" style="padding: 3em;">
+
+    <mat-card *ngFor="let item of imagesArray">
+
+        <img mat-card-image [src]="item.image">
+
+        <mat-card-actions>
+            <button mat-button (click)="addNewImage(item.image, item.name)">Add to Gallery</button>
+        </mat-card-actions>
+
+    </mat-card>
+
+</div>

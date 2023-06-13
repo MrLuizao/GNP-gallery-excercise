@@ -1,0 +1,17 @@
+
+
+mat-list-item{
+    div{
+        display: flex;
+        align-items: center;
+
+        img{
+            border-radius: 50%;
+            height: 36px;
+            width: 36px;
+        }
+        span{
+            margin-left: 12px;
+        }
+    }
+}
