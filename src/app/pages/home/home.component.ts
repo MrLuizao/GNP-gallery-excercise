@@ -1,24 +1,33 @@
 import { Component } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSelectModule} from '@angular/material/select';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSidenavModule} from '@angular/material/sidenav';
 import { Store } from '@ngrx/store';
 import { addImage } from 'src/app/redux/image.actions';
+import { DataApiService } from 'src/app/services/data-api.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  standalone: true,
-  imports: [MatSidenavModule, MatFormFieldModule, MatSelectModule, MatButtonModule],
+  styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent {
 
   
-  constructor(private store: Store) { }
+  constructor(  private store: Store,
+                private dataService: DataApiService) { }
 
   ngOnInit(){
+  
+    this.dataService.getImagesAPI().subscribe({
+      
+      next:(response: any)=>{
+        console.log("response", response);
+
+      },
+      error:(error)=>{
+        console.error(error)
+      }
+
+    })
 
   }
 
