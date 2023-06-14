@@ -2,11 +2,21 @@
 .grid-images{
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+
+    padding-top: 115px;
+    padding-bottom: 115px;
+    padding-left: 64px;
+    padding-right: 64px;
 
     mat-card{
         img{
             cursor: pointer;
+            height: 250px; 
+            object-fit: contain;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
         }
     }
 }

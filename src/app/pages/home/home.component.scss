@@ -2,7 +2,11 @@
 mat-drawer-container{
     height: 100vh;
     
-    mat-drawer{
-        width: 30%;
+    mat-drawer-content{
+
+        mat-toolbar {
+            position: fixed;
+            z-index: 11;
+        }
     }
 }

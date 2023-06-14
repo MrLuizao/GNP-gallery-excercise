@@ -1,17 +1,27 @@
 
+div.list{
+    display: flex;
+    align-items: center;
+    padding: 1em;
 
-mat-list-item{
-    div{
-        display: flex;
+    img{
+        border-radius: 50%;
+        height: 90px;
+        width: 90px;
+        object-fit: contain;
+        display: flex; 
+        justify-content: center; 
         align-items: center;
-
-        img{
-            border-radius: 50%;
-            height: 36px;
-            width: 36px;
-        }
-        span{
-            margin-left: 12px;
-        }
+        
     }
+
+    span{
+        margin-left: 12px;
+        margin-right: 24px;
+    }
+}
+
+div.empty{
+    padding: 2.5em;
+    text-align: center;
 }

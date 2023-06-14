@@ -1,5 +1,5 @@
 
-<mat-drawer-container class="example-container">
+<mat-drawer-container>
 
     <mat-drawer #drawer>
         
@@ -8,7 +8,13 @@
     </mat-drawer>
 
     <mat-drawer-content>
-        <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+
+        <mat-toolbar>
+            <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
+              <mat-icon>arrow_back_ios</mat-icon>
+              <span> View My Gallery</span>
+            </button>        
+        </mat-toolbar>
 
         <app-all-images></app-all-images>
 

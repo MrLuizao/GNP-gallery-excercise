@@ -6,6 +6,7 @@ import { ImageGalleryComponentComponent } from './image-gallery-component/image-
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -18,7 +19,8 @@ import { MatListModule } from '@angular/material/list';
     CommonModule,
     MatCardModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    MatDialogModule
   ],
   exports:[
     AllImagesComponent,

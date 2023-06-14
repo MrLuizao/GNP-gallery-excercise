@@ -17,6 +17,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -36,7 +39,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
         StoreModule.forRoot({ imageReducer }),
         StoreDevtoolsModule.instrument({ maxAge: 25 }),
         ComponentsModule,
-        MatSidenavModule, MatFormFieldModule, MatSelectModule, MatButtonModule
+        MatSidenavModule, MatFormFieldModule, MatSelectModule, MatButtonModule, MatDialogModule, MatToolbarModule,
+        MatIconModule
     ]
 })
 export class AppModule { }

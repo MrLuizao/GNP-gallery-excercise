@@ -1,13 +1,16 @@
 
-<mat-list role="list">
+<div class="empty" *ngIf="imagesList.length === 0">
 
-    <mat-list-item role="listitem" *ngFor="let item of imagesList">
+    <p> Empty View </p>
+    <p> add elements from the images list</p>
 
-        <div>
-            <img [src]="item.url">
-            <span>{{item.name}}</span>
-        </div>
+</div>
 
-    </mat-list-item>
+<div *ngIf="imagesList.length !== 0">
 
-</mat-list>
+    <div class="list" *ngFor="let item of imagesList">
+        <img [src]="item.url">
+        <span>{{item.name}}</span>
+    </div>
+
+</div>
