@@ -1,14 +1,25 @@
 
-<div class="grid-images">
+<div class="contain">
 
-    <mat-card *ngFor="let item of imagesArray">
-
-        <img mat-card-image [src]="item.image" (click)="openDialog(item)">
-
-        <mat-card-actions>
-            <button mat-button (click)="addNewImage(item.image, item.name)">Add to Gallery</button>
-        </mat-card-actions>
-
-    </mat-card>
+    <section>
+        <input type="text" [(ngModel)]="searchTxt">
+    </section>
+    
+    <div class="grid-images">
+    
+        <mat-card *ngFor="let item of imagesPaginated | filter: searchTxt">
+            <img mat-card-image [src]="item.image" (click)="openDialog(item)">
+            <mat-card-actions>
+                <button mat-button (click)="addImage(item.image, item.name)">Add to Gallery</button>
+            </mat-card-actions>
+        </mat-card>
+    
+    </div>
 
 </div>
+
+<section class="foot">
+    <button mat-button (click)="prevPage()">Prev</button>
+    <button mat-button (click)="nextPage()">Next</button>
+</section>
+

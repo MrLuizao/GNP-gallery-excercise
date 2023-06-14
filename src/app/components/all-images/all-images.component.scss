@@ -1,22 +1,50 @@
 
-.grid-images{
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
-
-    padding-top: 115px;
-    padding-bottom: 115px;
+div.contain{
+    padding-top: 64px;
+    padding-bottom: 96px;
     padding-left: 64px;
     padding-right: 64px;
 
-    mat-card{
-        img{
-            cursor: pointer;
-            height: 250px; 
-            object-fit: contain;
-            display: flex; 
-            justify-content: center; 
-            align-items: center;
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 96px;
+
+        input{
+            width: 50vw;
         }
+    }
+
+    .grid-images{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+    
+        mat-card{
+            img{
+                cursor: pointer;
+                height: 250px; 
+                object-fit: contain;
+                display: flex; 
+                justify-content: center; 
+                align-items: center;
+            }
+        }
+    }
+
+}
+
+section.foot{
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    width: 100vw;
+    z-index: 11;
+    display: flex;
+    justify-content: space-between;
+
+    button{
+        margin: 1em;
     }
 }

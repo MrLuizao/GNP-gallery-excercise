@@ -16,6 +16,10 @@ import { DataApiService } from 'src/app/services/data-api.service';
 export class AllImagesComponent {
 
   imagesArray: ImageApiI[] = []
+  imagesPaginated: ImageApiI[] = []
+  itemsToView = 12; 
+  pageCurrent = 1;
+  searchTxt = ''; 
 
   constructor(  private store: Store,
                 public dialog: MatDialog,
@@ -27,18 +31,16 @@ export class AllImagesComponent {
       
       next:(response: any): void=>{
         this.imagesArray = response
-        console.log("this.imagesArray", this.imagesArray);
+        this.setPagination();
 
       },
       error:(error)=>{
         console.error(error)
       }
-
-    })
-
+    });
   }
 
-  addNewImage(imageUrl: string, imageName: string) {
+  addImage(imageUrl: string, imageName: string) {
     const image = { url: imageUrl, name: imageName };
     this.store.dispatch(addImage({ image }));
   }
@@ -47,6 +49,25 @@ export class AllImagesComponent {
     this.dialog.open(DetailsComponent, {
       data: params,
     });
+  }
+
+
+  setPagination() {
+    let initialIndex = (this.pageCurrent - 1) * this.itemsToView;
+    let lastIndex = initialIndex + this.itemsToView;
+    this.imagesPaginated = this.imagesArray.slice(initialIndex, lastIndex);
+  }
+    
+  nextPage() {
+    this.pageCurrent++;
+    this.setPagination();
+  }
+
+  prevPage() {
+    if (this.pageCurrent > 1) {
+      this.pageCurrent--;
+      this.setPagination();
+    }
   }
 
 }

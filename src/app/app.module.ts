@@ -22,7 +22,6 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 
 
-
 @NgModule({
     declarations: [
         AppComponent,
@@ -39,7 +38,12 @@ import {MatIconModule} from '@angular/material/icon';
         StoreModule.forRoot({ imageReducer }),
         StoreDevtoolsModule.instrument({ maxAge: 25 }),
         ComponentsModule,
-        MatSidenavModule, MatFormFieldModule, MatSelectModule, MatButtonModule, MatDialogModule, MatToolbarModule,
+        MatSidenavModule, 
+        MatFormFieldModule, 
+        MatSelectModule, 
+        MatButtonModule, 
+        MatDialogModule, 
+        MatToolbarModule,
         MatIconModule
     ]
 })

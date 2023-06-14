@@ -7,20 +7,25 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { FilterPipe } from '../pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AllImagesComponent,
-    ImageGalleryComponentComponent
+    ImageGalleryComponentComponent,
+    FilterPipe
   ],
   imports: [
     CommonModule,
+    FormsModule,
     MatCardModule,
     MatButtonModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatPaginatorModule
   ],
   exports:[
     AllImagesComponent,
