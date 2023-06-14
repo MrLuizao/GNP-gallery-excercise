@@ -48,6 +48,7 @@ export class AllImagesComponent {
   openDialog(params: any) {    
     this.dialog.open(DetailsComponent, {
       data: params,
+      id: "dialog-detais"
     });
   }
 

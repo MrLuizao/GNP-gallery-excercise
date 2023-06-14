@@ -2,4 +2,12 @@
 div{
     display: flex;
     flex-direction: column;
+    
+    background-color: transparent;
+
+    section{
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+    }
 }

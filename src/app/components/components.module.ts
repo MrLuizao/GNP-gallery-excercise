@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatIconModule } from '@angular/material/icon';
 import { FilterPipe } from '../pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
 
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatListModule,
     MatDialogModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatIconModule
   ],
   exports:[
     AllImagesComponent,
